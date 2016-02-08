@@ -1,6 +1,7 @@
 Bookmark Manager - Week 4 Makers course
 
 User stories:
+```
 As a user of the bookmark manager
 So that I can see what links are available
 I want to be shown a list of recently added links
@@ -16,6 +17,7 @@ I want to add tags and keywords to existing links
 As a user of the bookmark manager
 So that I can find the type of links that I like
 I want to be able to filter links by tags or keywords
+```
 
 Objects
 User
