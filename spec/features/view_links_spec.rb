@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 feature 'Viewing Links' do
 
   scenario '-> users can view the list of links on the links page' do
