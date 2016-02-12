@@ -21,10 +21,10 @@ class User
   validates_presence_of :email
   validates_format_of :email, :with => /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$/
 
-  # def password
-  #   @password ||= Password.new(password_hash)
-  # end
-  #
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
   def password=(password)
     @password = password
     self.password_hash = BCrypt::Password.create(password)
