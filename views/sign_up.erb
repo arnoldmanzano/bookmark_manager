@@ -20,7 +20,7 @@
   <input type= 'submit' value= "Submit">
 </form>
 
-<% unless current_user %>
-<p> Passwords do not match </p>
-<% end %>
-<%= flash[:blah] %>
+<% unless flash[:blah].nil? %>
+<%flash[:blah].each do |x|%>
+  <%=x%>
+<%end end%>

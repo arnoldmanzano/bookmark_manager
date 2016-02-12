@@ -7,7 +7,16 @@ class User
 
   property :id, Serial
   property :name, Text
-  property :email, Text, :required => true
+  property :email, Text, :required => true, :format => :email_address, :unique => true,
+  :messages => {
+      :presence  => "Please sign in with a valid email",
+      :is_unique => "This email is already registered",
+      :format    => "Please check the format of the email"
+    }
+
+
+
+
   property :password_hash, Text
   attr_reader :password
   attr_accessor :password_confirmation

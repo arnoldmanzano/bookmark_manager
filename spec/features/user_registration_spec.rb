@@ -26,6 +26,7 @@ feature 'preventing incorrect signups' do
     fill_in('password_confirmation', with: 'weak')
     click_button('Submit')
     expect(current_path).to eq '/signup'
+    expect(page).to have_content 'Please sign in with a valid email'
   end
 
   scenario 'cannot sign up with an email with a wrong format' do
@@ -36,5 +37,14 @@ feature 'preventing incorrect signups' do
     fill_in('password_confirmation', with: 'weak')
     click_button('Submit')
     expect(current_path).to eq '/signup'
+    expect(page).to have_content 'Please check the format of the email'
+  end
+end
+
+feature 'preventing signups if email is registered already' do
+  scenario 'cannot sign up with email if registered' do
+    correct_sign_up
+    expect{correct_sign_up}.not_to change(User, :count)
+    expect(page).to have_content 'This email is already registered'
   end
 end
