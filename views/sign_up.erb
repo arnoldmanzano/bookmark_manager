@@ -21,6 +21,7 @@
 </form>
 
 <% unless flash[:blah].nil? %>
-<%flash[:blah].each do |x|%>
-  <%=x%>
-<%end end%>
+  <%flash[:blah].each do |message|%>
+    <%=message%>
+  <%end%>
+<%end%>

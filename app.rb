@@ -57,7 +57,17 @@ class Bookmarks < Sinatra::Base
     end
   end
 
+  get '/log_in' do
+    erb :log_in
+  end
 
+  post '/signed_in' do
+    @user = User.first(name: params[:name])
+    # it returns a nil if database entry doesn't exist
+    # params[:password]
+    # current_user #session[:id]
+    erb :signed_in
+  end
 
   #An altnerative way of doing it by identifying the tag first.
   # get '/tags/:name' do

@@ -13,10 +13,6 @@ class User
       :is_unique => "This email is already registered",
       :format    => "Please check the format of the email"
     }
-
-
-
-
   property :password_hash, Text
   attr_reader :password
   attr_accessor :password_confirmation
