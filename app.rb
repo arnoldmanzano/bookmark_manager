@@ -63,13 +63,13 @@ class Bookmarks < Sinatra::Base
 
   post '/signed_in' do
     @user = User.first(name: params[:name])
-    if @user != nil && @user.password == params[:password]
+    if @user && @user.password == params[:password]
       session[:user_id] = @user.id
       erb :signed_in
-    elsif @user == nil
+    elsif @user.nil?
       flash.now[:invaliduser] = 'User does not exist'
       erb :log_in
-    elsif @user != nil && @user.password != params[:password]
+    elsif @user && @user.password != params[:password]
       flash.now[:invaliduser] = 'Invalid password'
       erb :log_in
     end
