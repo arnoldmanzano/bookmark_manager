@@ -1,24 +1,29 @@
-Bookmark Manager - Week 4 Makers course
+BOOKMARK MANAGER README
 
-User stories:
 ```
-As a time-pressed user
-So that I can quickly go to web sites I regularly visit
-I would like to see a list of links on the homepage
+USER STORY ONE
+As a USER
+So that I can see the pages that are bookmarked
+I want to see a list of links to the bookmarked pages
+```
 
-As a time-pressed user
-So that I can quickly find web sites I recently bookmarked
-I would like to see links in descending chronological order
+```
+USER STORY TWO
+As a USER
+So that I can add to bookmarked pages list
+I want to save the links to pages I like to the list of bookmarks
+```
 
-As a time-pressed user
-So that I can save a website
-I would like to add the site's address and title to my bookmark manager
+```
+USER STORY THREE
+As a USER
+So that I can categorise my links
+I want to be able to tag them
+```
 
-As a time-pressed user
-So that I can organise my many links into different categories for ease of search
-I would like to add tags to the links in my bookmark manager
-
-As a time-pressed user
-So that I can quickly find links on a particular topic
-I would like to filter links by tag
+```
+USER STORY FOUR
+As a USER
+So that I can see specific links relating to topics
+I want to be able to filter my bookmarks based on the tags I've set
 ```
